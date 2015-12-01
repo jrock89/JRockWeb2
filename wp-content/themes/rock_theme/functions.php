@@ -35,6 +35,7 @@
     // add scripts
       wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), true);
+    wp_enqueue_script('waypoint-js', get_template_directory_uri() . '/js/waypoints.js', array('jquery'), true);
 
 
     if( is_singular()) wp_enqueue_script('comment-reply');
@@ -116,6 +117,83 @@
   }
   function aboutParagraph(){
       the_field('about_paragraph');
+  }
+
+  function offer1Icon(){
+      the_field('offer_1_icon');
+  }
+  function offer1Title(){
+      the_field('offer_1_title');
+  }
+  function offer1Info(){
+      the_field('offer_1_info');
+  }
+
+  function offer2Icon(){
+      the_field('offer_2_icon');
+  }
+  function offer2Title(){
+      the_field('offer_2_title');
+  }
+  function offer2Info(){
+      the_field('offer_2_info');
+  }
+
+  function offer3Icon(){
+      the_field('offer_3_icon');
+  }
+  function offer3Title(){
+      the_field('offer_3_title');
+  }
+  function offer3Info(){
+      the_field('offer_3_info');
+  }
+
+  function offer4Icon(){
+      the_field('offer_4_icon');
+  }
+  function offer4Title(){
+      the_field('offer_4_title');
+  }
+  function offer4Info(){
+      the_field('offer_4_info');
+  }
+
+
+  function contactMyName(){
+      the_field('my_name');
+  }
+  function contactAddress(){
+      the_field('my_address');
+  }
+  function contactEmail(){
+      the_field('my_email');
+  }
+  function contactPhone(){
+      the_field('my_phone');
+  }
+
+  function socialFacebook(){
+      the_field('facebook');
+  }
+  function socialGithub(){
+      the_field('github');
+  }
+  function socialInstagram(){
+      the_field('instagram');
+  }
+  function socialBehance(){
+      the_field('behance');
+  }
+  function socialLinkedin(){
+      the_field('linkedin');
+  }
+
+  function footerBlock1(){
+      the_field('foot_block_1');
+  }
+  function footerBlock2(){
+      the_field('foot_block_2');
   }
 
 

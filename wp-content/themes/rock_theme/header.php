@@ -9,6 +9,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title><?php wp_title(''); ?></title>
 
+
+    <link href="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo2.png" rel="shortcut icon">
     <!-- custom google font -->
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'>
     <!-- font awesome -->
@@ -17,6 +19,7 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
+    <?php include_once("analyticstracking.php") ?>
 
 
     <div class="loader" >
@@ -32,8 +35,8 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <div class="jumbotron loading_box" style="background:transparent;text-align:center;color:#2cf08b;">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/jrwlogowhite.png" alt="" />
+            <div class="jumbotron loading_box" style="background:transparent;text-align:center;">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo.png" alt="" />
               <h1 class="mob_loader">Loading...</h1>
             </div>
           </div>
@@ -90,14 +93,68 @@
       <!-- hero section -->
       <div class="container-fluid">
         <div class="row feature">
-          <img src="<?php header_image(); ?>" alt="lake background" />
+          <!-- <img src="<?php header_image(); ?>" alt="lake background" /> -->
 
 
           <div class="feature-text col-xs-12">
 
+                <a href="<?php echo esc_url( home_url() ); ?>"><div class="brand_box">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo.png" alt="" />
+              </div></a>
+
+              <div class="main_menu">
+                <!-- <i class="fa fa-navicon"></i> -->
+                  <section class="material-design-hamburger">
+                    <button class="material-design-hamburger__icon">
+                      <span class="material-design-hamburger__layer"></span>
+                    </button>
+                  </section>
+
+                  <!-- <section class="menu menu--off">
+                    <div>Android's Material Design Hamburger Animation</div>
+                    <div>Adapted for the web by <a href="https://swirlycheetah.com" target="_blank">Chris Wheatley</a></div>
+                    <div><a href="https://github.com/swirlycheetah/material-design-hamburger" target="_blank">Available on GitHub</a></div>
+                    <div><a href="https://twitter.com/swirlycheetah" target="_blank">Follow me on Twitter @swirlycheetah</a></div>
+                  </section> -->
+              </div>
+
+
+              <div class="my_menu">
+
+                <div class="menu_pic">
+                  <img src="<?php aboutPicture(); ?>" alt="Profile Picture Missing" />
+                </div>
+
+                <div class="menu_items">
+                  <div id="what_menu" class="menu_item underline">
+                    WHAT I DO
+                  </div>
+                  <div id="who_menu" class="menu_item underline">
+                    WHO I AM
+                  </div>
+                  <div id="work_menu" class="menu_item underline">
+                    MY WORK
+                  </div>
+                  <div id="contact_menu" class="menu_item underline">
+                    CONTACT
+                  </div>
+                </div>
+
+
+                <div class="menu_social">
+                  <a target="blank" href="<?php socialBehance(); ?>"><i class="fa fa-behance fa-lg"></i></a>
+                  <a target="blank" href="<?php SocialInstagram(); ?>"><i class="fa fa-instagram fa-lg"></i></a>
+                  <a target="blank" href="<?php socialGithub(); ?>"><i class="fa fa-github fa-lg"></i></a>
+                  <a target="blank" href="<?php socialFacebook(); ?>"><i class="fa fa-facebook fa-lg"></i></a>
+                  <a target="blank" href="<?php socialLinkedin(); ?>"><i class="fa fa-linkedin fa-lg"></i></a>
+                  <a target="blank" href="mailto:<?php contactEmail(); ?>"><i class="fa fa-envelope fa-lg"></i></a>
+                </div>
+
+              </div>
+
 
               <!-- <?php featureText(); ?> -->
-              <h1><i>JRock<span style="opacity:0.5">Web</span> brings to you</i>
+              <h1><i>JRockWeb brings to you</i>
               <br>CREATIVE DESIGN, <br> DEVELOPMENT, AND BRANDING.</h1>
 
 
